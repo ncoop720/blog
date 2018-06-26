@@ -1,0 +1,7 @@
+<h1>Home Page</h1>
+
+<% @posts.each do |post| %>
+	<p><%= post.title %></p>
+	<p><%= post.author %></p>
+	<p><%= post.body %></p>
+<% end %>
