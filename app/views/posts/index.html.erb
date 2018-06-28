@@ -1,5 +1,5 @@
 <h1>Home Page</h1>
 
 <% @posts.each do |post| %>
-	<%= render 'show', post: post %>
+	<%= render 'show', post: post, edit: false %>
 <% end %>

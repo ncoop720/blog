@@ -1,6 +1,6 @@
 <p><%= post.title %></p>
 <p><%= post.author %></p>
 <p><%= post.body %></p>
-<% if admin_signed_in? %>
+<% if edit %>
 	<%= link_to 'edit', edit_post_path(post_id: post.id) %>
 <% end %>
