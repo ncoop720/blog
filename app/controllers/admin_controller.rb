@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
 	before_action :authenticate_admin!
+	include AdminHelper
 
 	def index
 		@posts = Post.all
