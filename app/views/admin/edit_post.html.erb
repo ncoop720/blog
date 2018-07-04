@@ -2,8 +2,8 @@
 
 
 <%= form_for @post, url: {action: "update_post"} do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :body, size: "60x12" %>
+  <p><%= f.text_field :title, class: "form-control" %></p>
+  <p><%= f.text_area :body, class: "form-control", rows: 14 %></p>
   <%= f.hidden_field :id %>
   <%= f.submit "Update" %>
 <% end %>

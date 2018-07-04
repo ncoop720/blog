@@ -1,6 +1,6 @@
 <p><%= post.title %></p>
 <p><%= post.author %></p>
 <p><%= post.body %></p>
-<% if username(current_admin.email) == post.author %>
+<% if edit == true %>
 	<%= link_to 'edit', edit_post_path(post_id: post.id) %>
 <% end %>
