@@ -6,6 +6,14 @@ class AdminController < ApplicationController
 		@posts = Post.all.order(:created_at).reverse
 	end
 
+	def create_post
+		title = params[:title]
+		body = params[:body]
+		author = username(current_admin.email)
+		Post.create(title: title, author: author, body: body)
+		redirect_to admin_path
+	end
+
 	def edit_post
 		post_id = params[:post_id]
 		@post = Post.find(post_id)
