@@ -1,5 +1,9 @@
 <h1>Admin Index</h1>
 
+<!-- New Post Here -->
+
+
+<!-- Editable posts -->
 <% @posts.each do |post| %>
 	<%= render 'posts/show', post: post, edit: true %>
 <% end %>

@@ -3,7 +3,7 @@ class AdminController < ApplicationController
 	include AdminHelper
 
 	def index
-		@posts = Post.all
+		@posts = Post.all.order(:created_at).reverse
 	end
 
 	def edit_post
