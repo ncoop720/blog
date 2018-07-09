@@ -3,7 +3,6 @@
 <!-- New Post Here -->
 <%= link_to "New Post", new_post_path %>
 
-
 <!-- Editable posts -->
 <% @posts.each do |post| %>
 	<%= render 'posts/show', post: post, edit: true %>

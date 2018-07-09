@@ -1,6 +1,6 @@
 <h1>Editing "<%= @post.title %>"</h1>
 
-
+<!-- Form to edit a post -->
 <%= form_for @post, url: {action: "update_post"} do |f| %>
   <p><%= f.text_field :title, class: "form-control" %></p>
   <p><%= f.text_area :body, class: "form-control", rows: 14 %></p>

@@ -1,7 +1,8 @@
 <h1>New Post</h1>
 
+<!-- Form to make a new post -->
 <%= form_tag create_post_path do %>
-	<p><%= text_field_tag :title, nil, class: "form-control" %></p>
-	<p><%= text_area_tag :body, nil, class: "form-control", rows: 14 %></p>
+	<p><%= text_field_tag :title, nil, placeholder: "Title", class: "form-control" %></p>
+	<p><%= text_area_tag :body, nil, placeholder: "What's on your mind?", class: "form-control", rows: 14 %></p>
 	<%= button_tag "Submit", type: "submit" %>
 <% end %>

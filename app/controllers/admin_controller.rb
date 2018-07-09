@@ -20,11 +20,11 @@ class AdminController < ApplicationController
 	end
 
 	def update_post
-		post_id = params[:post][:id]
-		post_title = params[:post][:title]
-		post_body = params[:post][:body]
-		post = Post.find(post_id)
-		post.update(title: post_title, body: post_body)
+		id = params[:post][:id]
+		title = params[:post][:title]
+		body = params[:post][:body]
+		post = Post.find(id)
+		post.update(title: title, body: body)
 		redirect_to admin_path
 	end
 
