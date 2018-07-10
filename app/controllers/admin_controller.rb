@@ -10,6 +10,7 @@ class AdminController < ApplicationController
 		title = params[:title]
 		body = params[:body]
 		author = username(current_admin.email)
+		
 		Post.create(title: title, author: author, body: body)
 		redirect_to admin_path
 	end
@@ -24,6 +25,7 @@ class AdminController < ApplicationController
 		title = params[:post][:title]
 		body = params[:post][:body]
 		post = Post.find(id)
+
 		post.update(title: title, body: body)
 		redirect_to admin_path
 	end

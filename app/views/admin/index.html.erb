@@ -5,5 +5,7 @@
 
 <!-- Editable posts -->
 <% @posts.each do |post| %>
-	<%= render 'posts/show', post: post, edit: true %>
+	<% if post.author == username(current_admin.email) %>
+		<%= render 'posts/show', post: post, edit: true %>
+	<% end %>
 <% end %>
