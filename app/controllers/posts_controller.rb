@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 
 	def index
-		@posts = Post.all.order(:created_at).reverse
+		@featured_post = Post.last
+		@posts = Post.all.order(:created_at).reverse.drop(1)
 	end
 
 end
