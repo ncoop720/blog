@@ -2,10 +2,14 @@
 
 <!-- New Post Here -->
 <%= link_to "New Post", new_post_path %>
+<br>
+<br>
 
 <!-- Editable posts -->
 <% @posts.each do |post| %>
 	<% if post.author == username(current_admin.email) %>
 		<%= render 'posts/show', post: post, edit: true %>
+		<br>
+		<br>
 	<% end %>
 <% end %>
