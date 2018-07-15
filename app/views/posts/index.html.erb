@@ -1,11 +1,10 @@
 <h1>Home Page</h1>
 
 <br>
-<br>
 <p><%= render 'show', post: @featured_post, edit: false %></p>
-<br>
 <br>
 
 <% @posts.each do |post| %>
 	<%= render 'show', post: post, edit: false %>
+	<br>
 <% end %>

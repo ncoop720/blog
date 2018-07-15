@@ -5,4 +5,8 @@ class PostsController < ApplicationController
 		@posts = Post.all.order(:created_at).reverse.drop(1)
 	end
 
+	def show
+		@post = Post.find(params[:id])
+	end
+
 end

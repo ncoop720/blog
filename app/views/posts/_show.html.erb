@@ -1,4 +1,6 @@
-<p><%= post.title %></p>
+<a href=<%= show_post_path(id: post.id) %>>
+	<p><%= post.title %></p>
+</a>
 <p><%= post.author %></p>
 <p><%= post.body.html_safe %></p>
 <% if edit == true %>

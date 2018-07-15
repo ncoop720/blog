@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
+  get 'show_post' => 'posts#show'
+
   get 'admin' => 'admin#index'
 
   get 'edit_post' => 'admin#edit_post'
