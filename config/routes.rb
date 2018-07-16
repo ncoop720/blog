@@ -4,6 +4,14 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
+  resources :stories do
+    resources :comments
+  end
+
+  resources :comments do
+    resources :comments
+  end
+
   get 'show_post' => 'posts#show'
 
   get 'admin' => 'admin#index'
@@ -15,5 +23,6 @@ Rails.application.routes.draw do
   post 'create_post' => 'admin#create_post'
 
   patch 'update_post' => 'admin#update_post'
+
   
 end
