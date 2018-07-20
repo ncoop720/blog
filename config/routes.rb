@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  resources :stories do
+  resources :posts do
     resources :comments
   end
 
