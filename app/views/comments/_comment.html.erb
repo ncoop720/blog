@@ -3,10 +3,19 @@
   <small>Submitted <%= time_ago_in_words(comment.created_at) %> ago</small>
 
   <div id="reply-form"></div>
-  <%= render 'comments/comment_form', comment: comment %>
+  <%= link_to 'Reply', '#', onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
+  <div id='comment-<%= comment.id.to_s %>' style="display: none">
+  	<%= render 'comments/comment_form', comment: comment %>
+  </div>
 
   <ul>
     <%= render partial: 'comments/comment', collection: comment.comments %>
   </ul>
 
 </li>
+
+<script>
+	function renderCommentForm(id) {
+		document.getElementById('comment-' + id).style.display = 'initial';
+	}
+</script>
