@@ -6,6 +6,7 @@
   <%= link_to 'Reply', '#', onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
   <div id='comment-<%= comment.id.to_s %>' style="display: none">
   	<%= render 'comments/comment_form', comment: comment %>
+  	<%= link_to 'Cancel', '#', onclick: 'cancelCommentForm(' + comment.id.to_s + ')' %>
   </div>
 
   <ul>
@@ -17,5 +18,9 @@
 <script>
 	function renderCommentForm(id) {
 		document.getElementById('comment-' + id).style.display = 'initial';
+	}
+
+	function cancelCommentForm(id) {
+		document.getElementById('comment-' + id).style.display = 'none';
 	}
 </script>
