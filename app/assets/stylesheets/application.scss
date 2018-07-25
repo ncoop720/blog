@@ -18,5 +18,12 @@
 @import 'bootstrap';
 
 .comment-container {
-	
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+.well {
+	margin: 0 0 0 0;
+	padding: 0 0 0 10px;
 }

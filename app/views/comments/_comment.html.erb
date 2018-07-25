@@ -11,11 +11,12 @@
 		  	<%= link_to 'Cancel', '#comment-' + comment.id.to_s, onclick: 'cancelCommentForm(' + comment.id.to_s + ')' %>
 		  </div>
 
-		  <% unless comment.comments.empty? %>
-		    <%= render partial: 'comments/comment', collection: comment.comments %>
-		  <% end %>
 		</li>
 	</ul>
+
+	<% unless comment.comments.empty? %>
+    <%= render partial: 'comments/comment', collection: comment.comments %>
+  <% end %>
 </div>
 
 <script>
