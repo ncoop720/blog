@@ -11,6 +11,10 @@
 <%= f.submit "Add Comment" %>
 <% end %>
 
-<ul>
-  <%= render(partial: 'comments/comment', collection: @post.comments) %>
-</ul>
+<% unless @post.comments.empty? %>
+	<div class="well">
+		<ul class="comment-container">
+	  	<%= render(partial: 'comments/comment', collection: @post.comments) %>
+		</ul>
+	</div>
+<% end %>
