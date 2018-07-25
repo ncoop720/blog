@@ -3,10 +3,10 @@
   <small>Submitted <%= time_ago_in_words(comment.created_at) %> ago</small>
 
   <div id="reply-form"></div>
-  <%= link_to 'Reply', '#', onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
+  <%= link_to 'Reply', '#comment-' + comment.id.to_s, onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
   <div id='comment-<%= comment.id.to_s %>' style="display: none">
   	<%= render 'comments/comment_form', comment: comment %>
-  	<%= link_to 'Cancel', '#', onclick: 'cancelCommentForm(' + comment.id.to_s + ')' %>
+  	<%= link_to 'Cancel', '#comment-' + comment.id.to_s, onclick: 'cancelCommentForm(' + comment.id.to_s + ')' %>
   </div>
 
   <% unless comment.comments.empty? %>
