@@ -1,5 +1,5 @@
 <div class="well">
-	<ul class="comment-container">
+	<ul class="comment-container comment-<%= local_assigns[:color] %>">
 		<li>
 		  <small>Anon - <%= time_ago_in_words(comment.created_at) %> ago</small>
 		  <br>
@@ -12,12 +12,11 @@
 		  	<%= render 'comments/comment_form', comment: comment %>
 		  	<%= link_to 'Cancel', '#comment-' + comment.id.to_s, onclick: 'cancelCommentForm(' + comment.id.to_s + ')' %>
 		  </div>
-
 		</li>
 	</ul>
 
 	<% unless comment.comments.empty? %>
-    <%= render partial: 'comments/comment', collection: comment.comments %>
+    <%= render partial: 'comments/comment', collection: comment.comments, locals: {color: changeCommentColor(local_assigns[:color])} %>
   <% end %>
 </div>
 
