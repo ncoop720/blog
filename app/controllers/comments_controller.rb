@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+	include CommentsHelper
 	before_action :find_commentable
 
     def new

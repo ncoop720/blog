@@ -1,7 +1,7 @@
 <div class="well">
 	<ul class="comment-container">
 		<li>
-		  <small>Anon submitted <%= time_ago_in_words(comment.created_at) %> ago</small>
+		  <small>Anon - <%= time_ago_in_words(comment.created_at) %> ago</small>
 		  <br>
 		  <%= comment.body %>
 		  <br>
