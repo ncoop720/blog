@@ -11,4 +11,5 @@
 	<%= f.submit "Add Comment" %>
 <% end %>
 
+<div class="comment-divider"></div>
 <%= render partial: 'comments/comment', collection: @post.comments, locals: {color: "none"} %>

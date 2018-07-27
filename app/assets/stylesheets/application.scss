@@ -20,41 +20,45 @@
 .comment-container {
 	list-style-type: none;
 	margin: 0px 0 -1px 0;
-	padding: 0 0 0 5px;
+	padding: 0 0 5px 5px;
+	border-style: solid;
+	border-width: 0 2px 0 0;
+	border-color: black;
+}
+
+.well {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	background-color: inherit;
+}
+
+.comment-divider {
 	border-style: solid;
 	border-width: 1px;
 	border-color: black;
 }
 
-.well {
-	margin: 0 0 0px 0;
-	padding: 0 0px 0 0px;
-	background-color: inherit;
-}
-
 .comment-none {
 	border-radius: 0;
-	border-width: 0
+	border-width: 0 0 0 2px;
+	border-color: black;
 }
 
 .comment-blue {
 	border-radius: 0;
-	border-width: 0px 0px 0px 10px;
-	border-color: black black black blue;
-	// background-color: PowderBlue;
+	border-width: 0 0 0 10px;
+	border-color: blue;
 }
 
 .comment-yellow {
 	border-radius: 0;
-	border-width: 0px 0px 0px 10px;
-	border-color: black black black yellow;
-	// background-color: lightgreen;
+	border-width: 0 0 0 10px;
+	border-color: yellow;
 }
 
 .comment-red {
 	border-radius: 0;
-	border-width: 0px 0px 0px 10px;
-	border-color: black black black red;
-	// background-color: mistyrose;
+	border-width: 0 0 0 10px;
+	border-color: red;
 }
 
