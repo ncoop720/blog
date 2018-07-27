@@ -16,7 +16,7 @@ class AdminController < ApplicationController
 	end
 
 	def edit_post
-		post_id = params[:post_id]
+		post_id = params[:id]
 		@post = Post.find(post_id)
 	end
 
