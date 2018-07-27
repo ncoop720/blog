@@ -19,27 +19,42 @@
 
 .comment-container {
 	list-style-type: none;
-	margin: 5px 0 5px 0;
-	padding: 0 0 0 0;
+	margin: 0px 0 -1px 0;
+	padding: 0 0 0 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
 }
 
 .well {
-	margin: 0 0 5px 0;
-	padding: 0 5px 0 5px;
+	margin: 0 0 0px 0;
+	padding: 0 0px 0 0px;
+	background-color: inherit;
+}
+
+.comment-none {
+	border-radius: 0;
+	border-width: 0
 }
 
 .comment-blue {
-	border-color: black;
-	background-color: PowderBlue ;
+	border-radius: 0;
+	border-width: 0px 0px 0px 10px;
+	border-color: black black black blue;
+	// background-color: PowderBlue;
 }
 
 .comment-yellow {
-	border-color: black;
-	background-color: lightgreen;
+	border-radius: 0;
+	border-width: 0px 0px 0px 10px;
+	border-color: black black black yellow;
+	// background-color: lightgreen;
 }
 
 .comment-red {
-	border-color: black;
-	background-color: mistyrose;
+	border-radius: 0;
+	border-width: 0px 0px 0px 10px;
+	border-color: black black black red;
+	// background-color: mistyrose;
 }
 
