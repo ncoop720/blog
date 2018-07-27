@@ -1,4 +1,4 @@
-<div class="well comment-<%= local_assigns[:color] %>">
+<div id="focus-comment-<%= comment.id.to_s %>" class="well comment-<%= local_assigns[:color] %>">
 	<div class="comment-container">
 		<!-- <li> -->
 		  <small>Anon - <%= time_ago_in_words(comment.created_at) %> ago</small>
@@ -6,7 +6,7 @@
 		  <%= comment.body %>
 		  <br>
 
-		  <%= link_to 'Reply', '#comment-' + comment.id.to_s, onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
+		  <%= link_to 'Reply', '#focus-comment-' + comment.id.to_s, onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
 
 		  <div id='comment-<%= comment.id.to_s %>' style="display: none">
 		  	<%= render 'comments/comment_form', comment: comment %>
