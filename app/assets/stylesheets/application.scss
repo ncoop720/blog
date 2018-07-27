@@ -24,7 +24,22 @@
 }
 
 .well {
-	background-color: inherit;
 	margin: 0 0 5px 0;
 	padding: 0 5px 0 5px;
 }
+
+.comment-blue {
+	border-color: black;
+	background-color: PowderBlue ;
+}
+
+.comment-yellow {
+	border-color: black;
+	background-color: lightgreen;
+}
+
+.comment-red {
+	border-color: black;
+	background-color: mistyrose;
+}
+

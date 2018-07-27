@@ -7,12 +7,6 @@ module CommentsHelper
 		when 'yellow'
 			'red'
 		when 'red'
-			'green'
-		when 'green'
-			'orange'
-		when 'orange'
-			'purple'
-		when 'purple'
 			'blue'
 		else
 			'blue'
