@@ -10,6 +10,12 @@
 	<%= f.text_area :body, placeholder: "Add a comment" %><br/>
 	<%= f.submit "Add Comment" %>
 <% end %>
+<br>
 
-<div class="comment-divider"></div>
-<%= render partial: 'comments/comment', collection: @post.comments, locals: {color: "none"} %>
+<% unless @post.comments.empty? %>
+	<div class="comment-divider"></div>
+	<%= render partial: 'comments/comment', collection: @post.comments, locals: {color: "none"} %>
+<% end %>
+<br>
+
+<%= link_to "Back", root_path %>
