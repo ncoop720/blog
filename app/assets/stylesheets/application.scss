@@ -19,46 +19,53 @@
 
 .comment-container {
 	list-style-type: none;
-	margin: 0px 0 -1px 0;
-	padding: 0 0 5px 5px;
-	border-style: solid;
-	border-width: 0 2px 0 0;
-	border-color: black;
-}
-
-.well {
 	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	background-color: inherit;
+	padding: 0 0 0 10px;
+	// border-style: solid;
+	// border-width: 0 2px 0 0;
+	// border-color: black;
 }
 
-.comment-divider {
-	border-style: solid;
-	border-width: 1px;
-	border-color: black;
-}
+// .well {
+// 	margin: 0 0 0 5px;
+// 	padding: 0 0 0 0;
+// 	background-color: inherit;
+// 	border-style: none;
+// }
 
-.comment-none {
-	border-radius: 0;
-	border-width: 0 0 0 2px;
-	border-color: black;
-}
+// .comment-divider {
+// 	border-style: solid;
+// 	border-width: 1px;
+// 	border-color: black;
+// }
+
+// .comment-none {
+// 	border-radius: 0;
+// 	border-width: 0 0 0 2px;
+// 	border-color: black;
+// }
 
 .comment-blue {
+	padding: 0 0 0 5px;
+	border-style: solid;
 	border-radius: 0;
-	border-width: 0 0 0 10px;
+	border-width: 0 0 0 3px;
 	border-color: blue;
 }
 
 .comment-yellow {
+	padding: 0 0 0 5px;
+	border-style: solid;
 	border-radius: 0;
-	border-width: 0 0 0 10px;
-	border-color: yellow;
+	border-width: 0 0 0 3px;
+	border-color: green;
 }
 
 .comment-red {
+	padding: 0 0 0 5px;
+	border-style: solid;
 	border-radius: 0;
-	border-width: 0 0 0 10px;
+	border-width: 0 0 0 3px;
 	border-color: red;
 }
 
