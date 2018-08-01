@@ -21,51 +21,37 @@
 	list-style-type: none;
 	margin: 0 0 0 0;
 	padding: 0 0 0 10px;
-	// border-style: solid;
-	// border-width: 0 2px 0 0;
-	// border-color: black;
 }
 
-// .well {
-// 	margin: 0 0 0 5px;
-// 	padding: 0 0 0 0;
-// 	background-color: inherit;
-// 	border-style: none;
-// }
-
-// .comment-divider {
-// 	border-style: solid;
-// 	border-width: 1px;
-// 	border-color: black;
-// }
-
-// .comment-none {
-// 	border-radius: 0;
-// 	border-width: 0 0 0 2px;
-// 	border-color: black;
-// }
+.comment-none {
+	margin: 0 0 0 -17px;
+	padding: 0 0 0 7px;
+}
 
 .comment-blue {
+	margin: 0 0 0 -17px;
 	padding: 0 0 0 5px;
 	border-style: solid;
 	border-radius: 0;
-	border-width: 0 0 0 3px;
+	border-width: 0 0 0 2px;
 	border-color: blue;
 }
 
 .comment-yellow {
+	margin: 0 0 0 -17px;
 	padding: 0 0 0 5px;
 	border-style: solid;
 	border-radius: 0;
-	border-width: 0 0 0 3px;
+	border-width: 0 0 0 2px;
 	border-color: green;
 }
 
 .comment-red {
+	margin: 0 0 0 -17px;
 	padding: 0 0 0 5px;
 	border-style: solid;
 	border-radius: 0;
-	border-width: 0 0 0 3px;
+	border-width: 0 0 0 2px;
 	border-color: red;
 }
 

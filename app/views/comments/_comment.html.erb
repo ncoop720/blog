@@ -1,29 +1,22 @@
-<!-- <div id="focus-comment-<%= comment.id.to_s %>" class="well comment-<%= local_assigns[:color] %>"> -->
-	<div id="focus-comment-<%= comment.id.to_s %>" class="comment-container">
-		<div class="comment-<%= local_assigns[:color] %>">
-		<!-- <li> -->
-		  <small>Anon - <%= time_ago_in_words(comment.created_at) %> ago</small>
-		  <br>
-		  <%= comment.body %>
-		  <br>
+<div id="focus-comment-<%= comment.id.to_s %>" class="comment-container">
+	<div class="comment-<%= local_assigns[:color] %>">
+	  <small>Anon - <%= time_ago_in_words(comment.created_at) %> ago</small>
+	  <br>
+	  <%= comment.body %>
+	  <br>
 
-		  <%= link_to 'Reply', '#focus-comment-' + comment.id.to_s, onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
+	  <%= link_to 'Reply', '#focus-comment-' + comment.id.to_s, onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
 
-		  <div id='comment-<%= comment.id.to_s %>' style="display: none">
-		  	<%= render 'comments/comment_form', comment: comment %>
-		  	<%= link_to 'Cancel', '#comment-' + comment.id.to_s, onclick: 'cancelCommentForm(' + comment.id.to_s + ')' %>
-		  </div>
-		<!-- </li> -->
-		</div>
-		<% unless comment.comments.empty? %>
-	    <%= render partial: 'comments/comment', collection: comment.comments, locals: {color: changeCommentColor(local_assigns[:color])} %>
-	  <% end %>
-	  
+	  <div id='comment-<%= comment.id.to_s %>' style="display: none">
+	  	<%= render 'comments/comment_form', comment: comment %>
+	  	<%= link_to 'Cancel', '#comment-' + comment.id.to_s, onclick: 'cancelCommentForm(' + comment.id.to_s + ')' %>
+	  </div>
 	</div>
-	<!-- <div class="comment-divider"></div> -->
 
-	
-<!-- </div> -->
+	<% unless comment.comments.empty? %>
+    <%= render partial: 'comments/comment', collection: comment.comments, locals: {color: changeCommentColor(local_assigns[:color])} %>
+  <% end %>
+</div>
 
 <script>
 	function renderCommentForm(id) {
