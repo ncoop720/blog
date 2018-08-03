@@ -1,5 +1,5 @@
 <div id="focus-comment-<%= comment.id.to_s %>" class="comment-container">
-	<div class="comment-<%= local_assigns[:color] %>">
+	<div class="comment-<%= local_assigns[:color] %> comment-bg-<%= @bg_num %>">
 	  <small>Anon - <%= time_ago_in_words(comment.created_at) %> ago</small>
 	  <br>
 	  <%= comment.body %>

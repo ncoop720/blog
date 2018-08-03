@@ -11,7 +11,7 @@ module CommentsHelper
 		when 'red'
 			'blue'
 		else
-			'blue'
+			0
 		end
 	end
 

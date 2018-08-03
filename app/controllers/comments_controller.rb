@@ -24,6 +24,7 @@ class CommentsController < ApplicationController
     end
 
     def find_commentable
+    	@bg_num = '1'
       @commentable = Comment.find_by_id(params[:comment_id]) if params[:comment_id]
       @commentable = Post.find_by_id(params[:post_id]) if params[:post_id]
     end
