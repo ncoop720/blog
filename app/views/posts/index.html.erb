@@ -1,14 +1,17 @@
 <h1>Home Page</h1>
 <br>
 
-<p><%= render 'post', post: @featured_post, edit: false %></p>
+<p>
+	<a href=<%= show_post_path(id: @featured_post.id) %>>
+		<p><%= @featured_post.title %></p>
+	</a>
+	<p><%= @featured_post.author %></p>
+	<p><%= @featured_post.body.html_safe %></p>
+</p>
 <br>
 
-<div id="my-posts">
-	<!-- @posts.each do |post| %> -->
+<div id="my-posts" class="row">
 		<%= render @posts, edit: false %>
-		<!-- <br> -->
-	<!-- end %> -->
 </div>
 
 <div id="infinite-scrolling">
