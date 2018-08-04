@@ -1,10 +1,12 @@
 <div class="col-md-4">
-	<a href=<%= show_post_path(id: post.id) %>>
-		<p><%= post.title %></p>
-	</a>
-	<p><%= post.author %></p>
-	<p><%= post.body.html_safe %></p>
-	<% if edit == true %>
-		<%= link_to 'edit', admin_edit_post_path(id: post.id) %>
-	<% end %>
+	<div class="post-container">
+		<a href=<%= show_post_path(id: post.id) %>>
+			<p class="text-center"><%= post.title %></p>
+		</a>
+		<p class="text-center">by: <%= post.author %></p>
+		<p><%= post.body.html_safe %></p>
+		<% if edit == true %>
+			<%= link_to 'edit', admin_edit_post_path(id: post.id) %>
+		<% end %>
+	</div>
 </div>
