@@ -1,14 +1,26 @@
 <h1>Home Page</h1>
 <br>
 
-<p><%= render 'show', post: @featured_post, edit: false %></p>
+<p><%= render 'post', post: @featured_post, edit: false %></p>
 <br>
 
-<% @posts.each do |post| %>
-	<%= render 'show', post: post, edit: false %>
-	<br>
-<% end %>
+<div id="my-posts">
+	<!-- @posts.each do |post| %> -->
+		<%= render @posts, edit: false %>
+		<!-- <br> -->
+	<!-- end %> -->
+</div>
 
 <div id="infinite-scrolling">
   <%= will_paginate %>
 </div>
+
+<script>
+	$('#my-posts').append('<%= j render @posts, edit: false %>');
+	<% if @posts.next_page %>
+	  $('.pagination').replaceWith('<%= j will_paginate @posts %>');
+	<% else %>
+	  $(window).off('scroll');
+	  $('.pagination').remove();
+	<% end %>
+</script>
