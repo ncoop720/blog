@@ -6,10 +6,10 @@
 <br>
 
 <!-- Editable posts -->
-<% @posts.each do |post| %>
-	<% if post.author == username(current_admin.email) %>
-		<%= render 'posts/show', post: post, edit: true %>
-		<br>
-		<br>
+<div class="row">
+	<% @posts.each do |post| %>
+		<% if post.author == username(current_admin.email) %>
+			<%= render 'posts/post', post: post, edit: true %>
+		<% end %>
 	<% end %>
-<% end %>
+</div>
