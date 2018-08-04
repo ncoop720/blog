@@ -1,13 +1,20 @@
 <h1>Home Page</h1>
 <br>
 
-<p>
-	<a href=<%= show_post_path(id: @featured_post.id) %>>
-		<p><%= @featured_post.title %></p>
-	</a>
-	<p><%= @featured_post.author %></p>
-	<p><%= @featured_post.body.html_safe %></p>
-</p>
+
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<div id="featured-post">
+			<a href=<%= show_post_path(id: @featured_post.id) %>>
+				<p class="text-center"><%= @featured_post.title %></p>
+			</a>
+			<p class="text-center"><%= @featured_post.author %></p>
+			<p><%= @featured_post.body.html_safe %></p>
+		</div>
+	</div>
+	<div class="col-md-3"></div>
+</div>
 <br>
 
 <div id="my-posts" class="row">
