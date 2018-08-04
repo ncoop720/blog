@@ -14,13 +14,3 @@
 <div id="infinite-scrolling">
   <%= will_paginate %>
 </div>
-
-<script>
-	$('#my-posts').append('<%= j render @posts, edit: false %>');
-	<% if @posts.next_page %>
-	  $('.pagination').replaceWith('<%= j will_paginate @posts %>');
-	<% else %>
-	  $(window).off('scroll');
-	  $('.pagination').remove();
-	<% end %>
-</script>
