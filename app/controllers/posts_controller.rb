@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 	require 'will_paginate/array'
+	include PostsHelper
 
 	def index
 		@featured_post = Post.last
