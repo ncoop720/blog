@@ -9,7 +9,7 @@
 <div class="row">
 	<% @posts.each do |post| %>
 		<% if post.author == username(current_admin.email) %>
-			<%= render 'posts/post', post: post, edit: true %>
+			<%= render 'posts/post', post: post %>
 		<% end %>
 	<% end %>
 </div>

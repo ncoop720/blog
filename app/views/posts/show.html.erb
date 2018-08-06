@@ -1,5 +1,10 @@
 <h1><%= @post.title %></h1>
 <p>Author: <%= @post.author %></p>
+<p>
+	<% if @post.author == username(current_admin.email) %>
+		<%= link_to 'edit', admin_edit_post_path(id: @post.id) %>
+	<% end %>
+</p>
 <br>
 <p><%= @post.body %></p>
 <hr>

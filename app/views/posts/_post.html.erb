@@ -5,8 +5,5 @@
 		</a>
 		<p class="text-center">by: <%= post.author %></p>
 		<p><%= shorten_body(post.body.html_safe) %></p>
-		<% if edit == true %>
-			<%= link_to 'edit', admin_edit_post_path(id: post.id) %>
-		<% end %>
 	</div>
 </div>
