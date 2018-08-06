@@ -9,12 +9,17 @@
 <p><%= @post.body.html_safe %></p>
 <hr>
 
-<h3>Comments</h3>
+<h3 id="focus-post">Comments</h3>
 
-<%= form_for [@post, Comment.new] do |f| %>
-	<%= f.text_area :body, placeholder: "Add a comment" %><br/>
-	<%= f.submit "Add Comment" %>
-<% end %>
+<%= link_to 'New Comment', '#focus-post', onclick: 'renderCommentForm()' %>
+
+<div id="tier-1-comment-form" style="display: none">
+	<%= form_for [@post, Comment.new] do |f| %>
+		<%= f.text_area :body, placeholder: "Add a comment" %><br/>
+		<%= f.submit "Add Comment" %>
+	<% end %>
+	<%= link_to 'Cancel', '#focus-post', onclick: 'cancelCommentForm()' %>
+</div>
 <br>
 
 <% unless @post.comments.empty? %>
@@ -24,3 +29,13 @@
 <br>
 
 <%= link_to "Back", root_path %>
+
+<script>
+	function renderCommentForm() {
+		document.getElementById('tier-1-comment-form').style.display = 'initial';
+	}
+
+	function cancelCommentForm() {
+		document.getElementById('tier-1-comment-form').style.display = 'none';
+	}
+</script>
