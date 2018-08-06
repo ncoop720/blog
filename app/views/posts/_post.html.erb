@@ -4,6 +4,6 @@
 			<p class="text-center"><%= post.title %></p>
 		</a>
 		<p class="text-center">by: <%= post.author %></p>
-		<p><%= shorten_body(post.body.html_safe) %></p>
+		<p><%= shorten_body(post.body.html_safe).html_safe %></p>
 	</div>
 </div>
