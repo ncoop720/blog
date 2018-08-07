@@ -11,7 +11,9 @@
 
 <h3 id="focus-post">Comments</h3>
 
-<%= link_to 'New Comment', '#focus-post', onclick: 'renderTierOneCommentForm()' %>
+<div id="tier-1-new-comment">
+	<%= link_to 'New Comment', '#focus-post', onclick: 'renderTierOneCommentForm()' %>
+</div>
 
 <div id="tier-1-comment-form" style="display: none">
 	<%= form_for [@post, Comment.new] do |f| %>
@@ -33,9 +35,11 @@
 <script>
 	function renderTierOneCommentForm() {
 		document.getElementById('tier-1-comment-form').style.display = 'initial';
+		document.getElementById('tier-1-new-comment').style.display = 'none';
 	}
 
 	function cancelTierOneCommentForm() {
 		document.getElementById('tier-1-comment-form').style.display = 'none';
+		document.getElementById('tier-1-new-comment').style.display = 'initial';
 	}
 </script>
