@@ -1,9 +1,9 @@
 <div class="col-md-4 col-sm-6">
-	<div class="post-container">
-		<a href=<%= show_post_path(id: post.id) %>>
+	<a href=<%= show_post_path(id: post.id) %>>
+		<div class="post-container">
 			<p class="text-center"><%= post.title %></p>
-		</a>
-		<p class="text-center">by: <%= post.author %></p>
-		<p><%= shorten_body(post.body.html_safe).html_safe %></p>
-	</div>
+			<p class="text-center">by: <%= post.author %></p>
+			<p><%= shorten_body(post.body.html_safe).html_safe %></p>
+		</div>
+	</a>
 </div>
