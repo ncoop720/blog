@@ -17,6 +17,9 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+.post-link:hover {
+	text-decoration: none;
+}
 
 #featured-post {
 	height: 200px;
