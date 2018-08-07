@@ -5,7 +5,9 @@
 	  <%= comment.body %>
 	  <br>
 
-	  <%= link_to 'Reply', '#focus-comment-' + comment.id.to_s, onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
+		<div id="reply-<%= comment.id.to_s %>">
+	  	<%= link_to 'Reply', '#focus-comment-' + comment.id.to_s, onclick: 'renderCommentForm(' + comment.id.to_s + ')' %>
+	  </div>
 
 	  <div id='comment-<%= comment.id.to_s %>' style="display: none">
 	  	<%= render 'comments/comment_form', comment: comment %>
@@ -21,9 +23,11 @@
 <script>
 	function renderCommentForm(id) {
 		document.getElementById('comment-' + id).style.display = 'initial';
+		document.getElementById('reply-' + id).style.display = 'none';
 	}
 
 	function cancelCommentForm(id) {
 		document.getElementById('comment-' + id).style.display = 'none';
+		document.getElementById('reply-' + id).style.display = 'initial';
 	}
 </script>

@@ -11,14 +11,14 @@
 
 <h3 id="focus-post">Comments</h3>
 
-<%= link_to 'New Comment', '#focus-post', onclick: 'renderCommentForm()' %>
+<%= link_to 'New Comment', '#focus-post', onclick: 'renderTierOneCommentForm()' %>
 
 <div id="tier-1-comment-form" style="display: none">
 	<%= form_for [@post, Comment.new] do |f| %>
 		<%= f.text_area :body, placeholder: "Add a comment" %><br/>
 		<%= f.submit "Add Comment" %>
 	<% end %>
-	<%= link_to 'Cancel', '#focus-post', onclick: 'cancelCommentForm()' %>
+	<%= link_to 'Cancel', '#focus-post', onclick: 'cancelTierOneCommentForm()' %>
 </div>
 <br>
 
@@ -31,11 +31,11 @@
 <%= link_to "Back", root_path %>
 
 <script>
-	function renderCommentForm() {
+	function renderTierOneCommentForm() {
 		document.getElementById('tier-1-comment-form').style.display = 'initial';
 	}
 
-	function cancelCommentForm() {
+	function cancelTierOneCommentForm() {
 		document.getElementById('tier-1-comment-form').style.display = 'none';
 	}
 </script>
