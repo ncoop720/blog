@@ -22,12 +22,12 @@
 
 <script>
 	function renderCommentForm(id) {
-		document.getElementById('comment-' + id).style.display = 'initial';
+		document.getElementById('comment-' + id).style.display = 'block';
 		document.getElementById('reply-' + id).style.display = 'none';
 	}
 
 	function cancelCommentForm(id) {
 		document.getElementById('comment-' + id).style.display = 'none';
-		document.getElementById('reply-' + id).style.display = 'initial';
+		document.getElementById('reply-' + id).style.display = 'block';
 	}
 </script>
